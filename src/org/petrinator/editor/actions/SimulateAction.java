@@ -155,9 +155,10 @@ public class SimulateAction extends AbstractAction {
 				while(true)
 				{
 					try 
-				    {	Thread.currentThread().join();
+				    {	
 				    	m.fireTransition(id);	
-				    } catch (IllegalTransitionFiringError | IllegalArgumentException | PetriNetException | InterruptedException e) {
+				    } catch (IllegalTransitionFiringError | IllegalArgumentException | PetriNetException e) 
+					{
 						e.printStackTrace();
 					}
 				}
